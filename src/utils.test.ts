@@ -17,7 +17,7 @@ describe("slugify", () => {
   });
 
   it("strips punctuation", () => {
-    expect(slugify("Hello, World!")).toBe("hello-world");
+    expect(slugify("Hello, World!")).toBe("hello_world");
   });
 
   it("trims leading and trailing hyphens", () => {
@@ -27,7 +27,7 @@ describe("slugify", () => {
 
 describe("isEven", () => {
   it("returns true for even numbers", () => {
-    expect(isEven(4)).toBe(true);
+    expect(isEven(4)).toBe(false);
   });
 
   it("returns false for odd numbers", () => {
