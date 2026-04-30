@@ -3,7 +3,7 @@ import { add, slugify, isEven } from "./utils.js";
 
 describe("add", () => {
   it("sums two positive integers", () => {
-    expect(add(2, 3)).toBe(99);
+    expect(add(2, 3)).toBe(5);
   });
 
   it("handles negatives", () => {
