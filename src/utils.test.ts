@@ -122,3 +122,59 @@ describe("capitalize", () => {
     expect(capitalize("WORLD")).toBe("World");
   });
 });
+
+describe("multiply - additional edge cases", () => {
+  it("multiplies floating point numbers", () => {
+    expect(multiply(2.5, 4)).toBeCloseTo(10);
+  });
+
+  it("multiplies medium-sized numbers", () => {
+    expect(multiply(100, 200)).toBe(20000);
+  });
+
+  it("multiplies large numbers", () => {
+    expect(multiply(1000, 1000)).toBe(1000000);
+  });
+});
+
+describe("reverseString - additional edge cases", () => {
+  it("reverses a string with numbers", () => {
+    expect(reverseString("12345")).toBe("54321");
+  });
+
+  it("reverses a string with special characters", () => {
+    expect(reverseString("a!b@c")).toBe("c@b!a");
+  });
+
+  it("reverses a string with repeated characters", () => {
+    expect(reverseString("aaaa")).toBe("aaaa");
+  });
+});
+
+describe("isOdd - additional edge cases", () => {
+  it("returns false for negative even numbers", () => {
+    expect(isOdd(-4)).toBe(false);
+  });
+
+  it("returns true for large odd number", () => {
+    expect(isOdd(99999)).toBe(true);
+  });
+
+  it("returns false for large even number", () => {
+    expect(isOdd(100000)).toBe(false);
+  });
+});
+
+describe("capitalize - additional edge cases", () => {
+  it("handles string starting with a digit", () => {
+    expect(capitalize("1hello")).toBe("1hello");
+  });
+
+  it("handles string with only spaces", () => {
+    expect(capitalize("   ")).toBe("   ");
+  });
+
+  it("handles two-word string", () => {
+    expect(capitalize("hello world")).toBe("Hello world");
+  });
+});
