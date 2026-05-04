@@ -11,3 +11,11 @@ export function slugify(value:string  ):string{
 }
 
 export function isEven(n: number): boolean {return n % 2 === 0;}
+
+export function multiply(a: number, b: number): number {
+  return a * b;
+}
+
+export function reverseString(value: string): string {
+  return value.split('').reverse().join('');
+}
