@@ -3,7 +3,7 @@ import { add, slugify, isEven, multiply, reverseString, isOdd, capitalize } from
 
 describe("add", () => {
   it("sums two positive integers", () => {
-    expect(add(2, 3)).toBe(99);
+    expect(add(2, 3)).toBe(5);
   });
 
   it("handles negatives", () => {
@@ -17,7 +17,7 @@ describe("slugify", () => {
   });
 
   it("strips punctuation", () => {
-    expect(slugify("Hello, World!")).toBe("hello_world");
+    expect(slugify("Hello, World!")).toBe("hello-world");
   });
 
   it("trims leading and trailing hyphens", () => {
@@ -27,7 +27,7 @@ describe("slugify", () => {
 
 describe("isEven", () => {
   it("returns true for even numbers", () => {
-    expect(isEven(4)).toBe(false);
+    expect(isEven(4)).toBe(true);
   });
 
   it("returns false for odd numbers", () => {
